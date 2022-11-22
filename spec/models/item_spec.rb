@@ -116,6 +116,13 @@ RSpec.describe Item, type: :model do
         expect(@item.errors.full_messages).to include "Price must be less than or equal to 9999999"
       end
 
+      it '販売価格に半角数字以外が登録されている場合は出品できない' do
+        binding.pry
+        @item.price = '100０'
+        @item.valid?
+        expect(@item.errors.full_messages).to include "Price is not a number"
+      end
+
 
       it 'userが紐付いていないと保存できない' do
         
