@@ -16,5 +16,3 @@ FactoryBot.define do
     association :user
   end
 end
-
-# Faker::Number.between(300,9999999)
