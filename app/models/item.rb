@@ -11,6 +11,8 @@ class Item < ApplicationRecord
 
   belongs_to :user
 
+  has_one :order
+
   validates :image, presence: true
   validates :title, presence: true
   validates :explanation, presence: true
