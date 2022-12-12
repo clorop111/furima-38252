@@ -1,3 +1,3 @@
-class Order < ApplicationRecord
-  belongs_to :item
+class Payment < ApplicationRecord
+  belongs_to :record
 end
