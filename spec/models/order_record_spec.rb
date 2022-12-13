@@ -10,6 +10,16 @@ RSpec.describe OrderRecord, type: :model do
       it '全ての情報が入力されていれば保存できること' do
         expect(@order_record).to be_valid
       end
+
+      it '建物名が空でも保存できる' do
+        @order_record.building_name = nil
+        expect(@order_record).to be_valid
+      end
+
+      it '郵便番号が「3桁＋ハイフン＋4桁」の組み合わせであれば保存できる' do
+        @order_record.post_code = '123-4560'
+        expect(@order_record).to be_valid
+      end
     end
 
     context '配送先情報の保存ができないとき' do
@@ -51,10 +61,9 @@ RSpec.describe OrderRecord, type: :model do
         expect(@order_record.errors.full_messages).to include("City can't be blank")
       end
       it '番地が空だと保存できないこと' do
-        binding.pry
         @order_record.address = nil
         @order_record.valid?
-        expect(@order_record.errors.full_messages).to include("Address can't be blank"")
+        expect(@order_record.errors.full_messages).to include("Address can't be blank")
       end
       it '電話番号が空だと保存できないこと' do
         @order_record.phone_number = nil
