@@ -1,8 +1,11 @@
 require 'rails_helper'
 
 RSpec.describe OrderRecord, type: :model do
+
   before do
-    @order_record = FactoryBot.build(:order_record)
+    user = FactoryBot.create(:user)
+    item = FactoryBot.create(:item)
+    @order_record = FactoryBot.build(:order_record, user_id: user.id, item_id: item.id)
   end
 
   describe '配送先情報の保存' do
