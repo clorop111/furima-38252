@@ -85,11 +85,22 @@
   min-width: 250px;
 }
 
+
+
 .click-upload>p {
   margin-bottom: 15px;
 }
 
 /* /商品画像 */
+
+/* プレビュー */
+
+.click-upload img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+/* /プレビュー */
 
 /* 商品名と商品説明 */
 .new-items {
