@@ -6,13 +6,14 @@ class Item < ApplicationRecord
   belongs_to :prefecture
   belongs_to :days_required
 
-  has_one_attached :image
+  has_many_attached :images
 
 
   belongs_to :user
   has_one :record
 
-  validates :image, presence: true
+  validates :images, presence: true
+  validates :images, length: { minimum: 1, maximum: 5, message: "は1枚以上5枚以下にしてください" }
   validates :title, presence: true
   validates :explanation, presence: true
   validates :category_id, presence: true, numericality: { other_than: 1, message: "can't be blank" }

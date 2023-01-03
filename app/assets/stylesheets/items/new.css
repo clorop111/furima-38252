@@ -83,6 +83,7 @@
 .click-upload {
   margin: 15px 0;
   min-width: 250px;
+  
 }
 
 
@@ -94,11 +95,27 @@
 /* /商品画像 */
 
 /* プレビュー */
+#previews {
+  display: flex;
+  overflow: scroll;
+}
+
+.preview{
+  margin-right: 30px;
+  overflow: scroll;
+}
 
 .click-upload img {
-  width: 100%;
+  width: 100px;
   height: auto;
   object-fit: contain;
+}
+
+.image-delete-button {
+  text-align: center;
+  border: solid 1px;
+  cursor: pointer;
+  margin-bottom: 5px;
 }
 /* /プレビュー */
 
