@@ -83,13 +83,41 @@
 .click-upload {
   margin: 15px 0;
   min-width: 250px;
+  
 }
+
+
 
 .click-upload>p {
   margin-bottom: 15px;
 }
 
 /* /商品画像 */
+
+/* プレビュー */
+#previews {
+  display: flex;
+  overflow: scroll;
+}
+
+.preview{
+  margin-right: 30px;
+  overflow: scroll;
+}
+
+.click-upload img {
+  width: 100px;
+  height: auto;
+  object-fit: contain;
+}
+
+.image-delete-button {
+  text-align: center;
+  border: solid 1px;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+/* /プレビュー */
 
 /* 商品名と商品説明 */
 .new-items {
