@@ -13,11 +13,11 @@ ja:
         images: 画像
         title: 商品名 
         explanation: 商品の説明
-        category: カテゴリ
-        condition: 商品の状態
-        shipping_charge: 配送料
-        prefecture: 発送元の地域
-        days_required: 発送までの日数
+        category_id: カテゴリ
+        condition_id: 商品の状態
+        shipping_charge_id: 配送料
+        prefecture_id: 発送元の地域
+        days_required_id: 発送までの日数
         price: 販売価格
         
 
