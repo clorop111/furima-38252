@@ -7,7 +7,7 @@ app/assets/stylesheets/items/new.css %>
   </header>
   <div class="items-sell-main">
     <h2 class="items-sell-title">商品の情報を入力</h2>
-    <%= form_with model: @item, id: 'new_item', local: true do |f| %>
+    <%= form_with model: @item_form, id: 'new_item', local: true do |f| %>
 
 
     <%= render 'shared/error_messages', model: f.object %>
@@ -44,6 +44,13 @@ app/assets/stylesheets/items/new.css %>
       </div>
     </div>
     <%# /商品名と商品説明 %>
+    
+    <%# タグ付け %>
+    
+      <%= f.text_field :tag_ids, class: "form-control", id:'tag_ids',\
+      placeholder: "タグをつける。複数つけるには','で区切ってください。" %>
+
+    <%#/ タグ付け %>
 
     <%# 商品の詳細 %>
     <div class="items-detail">
