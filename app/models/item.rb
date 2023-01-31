@@ -7,7 +7,8 @@ class Item < ApplicationRecord
   belongs_to :days_required
 
   has_many_attached :images
-
+  has_many  :tag_items, dependent: :destroy
+  has_many  :tags, through: :tag_items
 
   belongs_to :user
   has_one :record
